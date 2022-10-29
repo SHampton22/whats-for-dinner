@@ -48,32 +48,34 @@ var desserts = [
       "Eclairs!",
      ];
 
+     
      var sidesIndexNum = getRandomIndex(sides);
      var mainDishesIndexNum = getRandomIndex(mainDishes);
      var dessertsIndexNum = getRandomIndex(desserts);
 
-
-     var potImage = document.querySelector('.pot')
-     var recipeSuggestion = document.querySelector('.recipe-suggestion')
+     var potImage = document.querySelector('.pot');
+     var recipeSuggestion = document.querySelector('.recipe-suggestion');
      var sideSelection = document.querySelector('#side');
      var mainDishSelection = document.querySelector('#main-dish');
      var dessertSelection = document.querySelector('#dessert');
      var randomRecipe = document.querySelector('#random-recipe');
-     var suggestionBox = document.querySelector('.suggestion-box')
-
-     var removeSuggestionButton = document.querySelector('#remove-suggestion-button')
+     var suggestionBox = document.querySelector('.suggestion-box');
+     
      var letsCookButton = document.querySelector('.cook-button');
+     var removeSuggestionButton = document.querySelector('#remove-suggestion-button');
+     var deleteSuggestionButton = document.querySelector('#delete-suggestion-button');
      
 
    
 
      letsCookButton.addEventListener('click', showRandomDish);
      removeSuggestionButton.addEventListener('click', function(){ hideShow(suggestionBox, potImage) });
-
+     deleteSuggestionButton.addEventListener('click', deleteRecipe);
 
      function getRandomIndex(array) {
         return Math.floor(Math.random() * array.length);
-     }
+     };
+
 
      function showRandomDish() {
         hideShow(potImage, suggestionBox);
@@ -85,14 +87,27 @@ var desserts = [
         } else if (dessertSelection.checked === true) {
              randomRecipe.innerHTML = desserts[dessertsIndexNum];
         }
-        
-     }
+     };
+
 
      function hideShow(hide, show) {
         hide.classList.add('hidden');
         show.classList.remove('hidden');
-     }
+     };
 
-     function clearUserInput() {
-        hideShow(suggestionBox, pot)
-     }
+
+     function deleteRecipe() {
+        var sideToRemove = sides.indexOf(randomRecipe.innerHTML);
+        var mainDishToRemove = mainDishes.indexOf(randomRecipe.innerHTML);
+        var dessertToRemove = desserts.indexOf(randomRecipe.innerHTML);
+
+        if (sides.includes(randomRecipe.innerHTML) === true) {
+            sides.splice(sideToRemove, 1);
+        }   else if (mainDishes.includes(randomRecipe.innerHTML) === true) {
+            mainDishes.splice(mainDishToRemove, 1);
+        }   else if (desserts.includes(randomRecipe.innerHTML) === true) {
+            desserts.splice(dessertToRemove, 1);
+        }
+     };
+
+
