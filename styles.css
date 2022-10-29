@@ -68,7 +68,7 @@ body {
     justify-content: center;
 }
 
- h1 {
+ #left-box-title {
     /* padding-top: 0px; */
     padding-left: 50px;
  }
@@ -97,15 +97,14 @@ body {
     width: 175px;
  }
 
-.make-this {
-   
-}
 
 svg {
     height: 120px;
     width: 120px;
-    
+}
 
+#suggestion-title {
+    font-style: italic;
 }
 
 #remove-suggestion-button {
@@ -116,7 +115,15 @@ svg {
     padding: 8px;
     height: 2rem;
 }
+
+#random-recipe {
+    font-size: xx-large;
+    font-weight: bold;
+}
  
+.hidden {
+    display: none;
+}
 
  
 /* 
