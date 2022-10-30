@@ -49,9 +49,7 @@ var desserts = [
      ];
 
      
-     var sidesIndexNum = getRandomIndex(sides);
-     var mainDishesIndexNum = getRandomIndex(mainDishes);
-     var dessertsIndexNum = getRandomIndex(desserts);
+     
 
      var potImage = document.querySelector('.pot');
      var recipeSuggestion = document.querySelector('.recipe-suggestion');
@@ -64,35 +62,37 @@ var desserts = [
      var letsCookButton = document.querySelector('.cook-button');
      var removeSuggestionButton = document.querySelector('#remove-suggestion-button');
      var deleteSuggestionButton = document.querySelector('#delete-suggestion-button');
-     
-
-   
+        
 
      letsCookButton.addEventListener('click', showRandomDish);
-     removeSuggestionButton.addEventListener('click', function(){ hideShow(suggestionBox, potImage) });
+     removeSuggestionButton.addEventListener('click', clearSelection);
      deleteSuggestionButton.addEventListener('click', deleteRecipe);
 
      function getRandomIndex(array) {
-        return Math.floor(Math.random() * array.length);
-     };
-
-
-     function showRandomDish() {
-        hideShow(potImage, suggestionBox);
-
-        if (sideSelection.checked === true) {
-           randomRecipe.innerHTML = sides[sidesIndexNum];
-        } else if (mainDishSelection.checked === true) {
-             randomRecipe.innerHTML = mainDishes[mainDishesIndexNum];
-        } else if (dessertSelection.checked === true) {
-             randomRecipe.innerHTML = desserts[dessertsIndexNum];
-        }
+        var randomIndexNumber = Math.floor(Math.random() * array.length);
+         return array[randomIndexNumber];
      };
 
 
      function hideShow(hide, show) {
         hide.classList.add('hidden');
         show.classList.remove('hidden');
+     };
+
+
+     function showRandomDish() {
+        
+        if (sideSelection.checked === true) {
+            hideShow(potImage, suggestionBox);
+            randomRecipe.innerHTML = getRandomIndex(sides);
+        } else if (mainDishSelection.checked === true) {
+             hideShow(potImage, suggestionBox);
+             randomRecipe.innerHTML = getRandomIndex(mainDishes);
+        } else if (dessertSelection.checked === true) {
+             hideShow(potImage, suggestionBox);
+             randomRecipe.innerHTML = getRandomIndex(desserts);
+        }
+        
      };
 
 
@@ -108,6 +108,14 @@ var desserts = [
         }   else if (desserts.includes(randomRecipe.innerHTML) === true) {
             desserts.splice(dessertToRemove, 1);
         }
+        return window.alert("YUCK! YOU WON'T HAVE TO SEE THAT RECIPE AGAIN!")
      };
 
+
+     function clearSelection() {
+        sideSelection.checked = false;
+        mainDishSelection.checked = false;
+        dessertSelection.checked = false;
+        hideShow(suggestionBox, potImage)
+     };
 
