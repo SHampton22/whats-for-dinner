@@ -17,7 +17,7 @@ ______________________________________________________
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-- <img width="726" alt="Screen Shot 2022-10-29 at 10 30 03 PM" src="https://user-images.githubusercontent.com/111614214/198859909-da48becf-875b-4520-add8-93d7e32e8557.png">
+<img width="726" alt="Screen Shot 2022-10-29 at 10 30 03 PM" src="https://user-images.githubusercontent.com/111614214/198859909-da48becf-875b-4520-add8-93d7e32e8557.png">
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
 - I was given 5 days to complete this project. I am currently starting week 4 of mod 1 in the program.
@@ -28,7 +28,7 @@ ______________________________________________________
 
 ### Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
-# Our learning goals and specific tech we worked with were:
+#### Our learning goals and specific tech we worked with were:
 - Gain experience building an application that utilizes HTML, CSS and JavaScript
 - Write HTML and CSS to match a provided comp
 - Understand how to listen to and respond to user events
