@@ -1,7 +1,4 @@
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
+ 
 
 # What's for Dinner? 
 
