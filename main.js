@@ -82,13 +82,13 @@ var desserts = [
 
      function showRandomDish() {
         
-        if (sideSelection.checked === true) {
+        if (sideSelection.checked) {
             hideShow(potImage, suggestionBox);
             randomRecipe.innerHTML = getRandomIndex(sides);
-        } else if (mainDishSelection.checked === true) {
+        } else if (mainDishSelection.checked) {
              hideShow(potImage, suggestionBox);
              randomRecipe.innerHTML = getRandomIndex(mainDishes);
-        } else if (dessertSelection.checked === true) {
+        } else if (dessertSelection.checked) {
              hideShow(potImage, suggestionBox);
              randomRecipe.innerHTML = getRandomIndex(desserts);
         }
@@ -101,11 +101,11 @@ var desserts = [
         var mainDishToRemove = mainDishes.indexOf(randomRecipe.innerHTML);
         var dessertToRemove = desserts.indexOf(randomRecipe.innerHTML);
 
-        if (sides.includes(randomRecipe.innerHTML) === true) {
+        if (sides.includes(randomRecipe.innerHTML)) {
             sides.splice(sideToRemove, 1);
-        }   else if (mainDishes.includes(randomRecipe.innerHTML) === true) {
+        }   else if (mainDishes.includes(randomRecipe.innerHTML)) {
             mainDishes.splice(mainDishToRemove, 1);
-        }   else if (desserts.includes(randomRecipe.innerHTML) === true) {
+        }   else if (desserts.includes(randomRecipe.innerHTML)) {
             desserts.splice(dessertToRemove, 1);
         }
         return window.alert("YUCK! YOU WON'T HAVE TO SEE THAT RECIPE AGAIN!")

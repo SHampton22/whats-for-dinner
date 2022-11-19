@@ -2,13 +2,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
 body {
     background-image: url("/assets/burger-friends.jpg");
     background-size: cover;
     margin: 0;
 }
-
 
 .banner {
     background-color: #0fb9b1;
@@ -19,13 +17,11 @@ body {
     align-items: center;
 }
 
-
 #text {
     font-size: medium;
     padding: 15px;
     font-weight:500
 }
-
 
 #add-a-recipe-button {
     border: none;
@@ -36,14 +32,12 @@ body {
     margin: 10px;
 }
 
-
 .boxes { 
     
     display: flex;
     align-content: center;
     justify-content: space-evenly;
 }
-
 
 #left-box {
     background-color: rgba(225, 225, 225, .9);
@@ -58,7 +52,6 @@ body {
     justify-content: center;
 }
 
-
 #right-box {
     background-color: rgba(225, 225, 225, .9);
     margin: 50px;
@@ -71,18 +64,15 @@ body {
     
 }
 
-
 #left-box-title {
     padding-left: 50px;
 }
-
 
 .radio-buttons {
     display:flex;
     padding-left: 50px;
     justify-content: flex-start;
 }
-
 
 form {
     display: flex;
@@ -92,7 +82,6 @@ form {
     height: 150px;
 }
  
-
 .cook-button {
     margin-left: 50px;
     background-color: #0fb9b1;
@@ -102,18 +91,15 @@ form {
     width: 175px;
 }
 
-
 svg {
     height: 120px;
     width: 120px;
 }
 
-
 #suggestion-title {
     font-style: italic;
     font-size: 2vw;
 }
-
 
 #remove-suggestion-button {
     background-color: #95a5a6;
@@ -124,18 +110,11 @@ svg {
     font-size: medium;
 }
 
-
 #random-recipe {
     font-size: 3vw;
     font-weight: bold;
 
 }
- 
-
-.hidden {
-    display: none;
-}
-
 
 #delete-suggestion-button {
     background-color: #ee5253;
@@ -145,18 +124,15 @@ svg {
     font-size: medium;
 }
 
-
 #right-title-box {
     display: flex;
     justify-content: space-around;
 }
 
-
 #random-recipe-box {
     display: flex;
     justify-content: center;
 }
-
 
 #remove-suggestion-button-box {
     display: flex;
@@ -164,22 +140,12 @@ svg {
     padding-top: 30px;
 }
 
-
 #delete-suggestion-button-box {
     display: flex;
     justify-content: center;
     padding-top: 25;
 }
 
-
-
- 
-/* 
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-*/
-
-
+.hidden {
+    display: none;
+}
